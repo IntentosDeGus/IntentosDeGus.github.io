@@ -1,0 +1,28 @@
+#Alto{
+    margin-bottom: 4rem ;
+}
+.auth-form-light{
+    border-radius: 1rem;
+}
+#Bajo{
+    margin-bottom: 2rem;
+}
+#Chiquito{
+    width: 100%;
+    height: 50rem
+}
+@media (max-width:1024px){
+    #Gus{
+        margin-top: 4rem;
+    }
+  }
+  @media (min-width:1024px){
+    #Logos{
+       margin: 40px 0 30px 0;
+    }
+  }
+  @media (min-width:2560px){
+    #Logos{
+        margin: 90px 0;
+    }
+  }

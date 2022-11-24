@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Portafolio del Aprendiz</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="vendors/feather/feather.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="css/cambios/style.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="images/favicon.ico" />
+</head>
+<body>
+  <div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo " href="index.html"><div class="loader" id="Bajo"></div></a>
+        <a class="navbar-brand brand-logo-mini" href="index.html"><div class="loader" id="Bajo"></div></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Busqueda nueva.." aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="icon-bell mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Notificaciones</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-info-alt mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Error de Aplicacion</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Ahora mismo
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="ti-settings mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Configuraciones</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Mensaje Privado
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="ti-user mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Nuevo Usuario Registrado</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Hace 3 dias
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="images/Perfil.jpeg" alt="profile"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                <i class="ti-settings text-primary"></i>
+                Ajustes
+              </a>
+              <a class="dropdown-item" href="index.html">
+                <i class="ti-power-off text-primary"></i>
+                Salir
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-settings d-none d-lg-flex">
+            <a class="nav-link" href="#">
+              <i class="container">
+                <input  type="checkbox">
+                <div class="checkmark"></div>
+              </i>
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="ti-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">Lista</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">Mensajes</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="setting-content">
+          <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
+            <div class="add-items d-flex px-3 mb-0">
+              <form class="form w-100">
+                <div class="form-group d-flex">
+                  <input type="text" class="form-control todo-list-input" placeholder="Agregar a Lista">
+                  <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">Añadir</button>
+                </div>
+              </form>
+            </div>
+            <div class="list-wrapper px-3">
+              <ul class="d-flex flex-column-reverse todo-list">
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Team review meeting at 3.00 PM
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Prepare for presentation
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Resolve all the low priority tickets due today
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Schedule meeting for next week
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Project review
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+              </ul>
+            </div>
+            
+          </div>
+          <!-- To do section tab ends -->
+          <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
+            <div class="d-flex align-items-center justify-content-between border-bottom">
+              <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">Contactos</p>
+              <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">Ver Todas</small>
+            </div>
+            <ul class="chat-list">
+              <li class="list active">
+                <div class="profile"><img src="images/faces/face1.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Larry Sanchez </p>
+                  <p>Hoy me di a tortazos con el profe</p>
+                </div>
+                <small class="text-muted my-auto">19 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <div class="wrapper d-flex">
+                    <p>Darianys</p>
+                  </div>
+                  <p>Que?</p>
+                </div>
+                <div class="badge badge-success badge-pill my-auto mx-2">4</div>
+                <small class="text-muted my-auto">23 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face3.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Eliud</p>
+                  <p>Perdio Argentina Boludo :(</p>
+                </div>
+                <small class="text-muted my-auto">14 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face4.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <p>Jose</p>
+                  <p>Y si quemamos a eliud?</p>
+                </div>
+                <small class="text-muted my-auto">2 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face5.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Luisa Buñuelo</p>
+                  <p>SMILE >:3</p>
+                </div>
+                <small class="text-muted my-auto">5 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face6.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Yeanis</p>
+                  <p>Estoy relajada UwU</p>
+                </div>
+                <small class="text-muted my-auto">47 min</small>
+              </li>
+            </ul>
+          </div>
+          <!-- chat tab ends -->
+        </div>
+      </div>
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#!">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Portafolio Aprendiz</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-title">Pseudocodigo</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Pseint/Uno.pdf" >1 &nbsp; |&nbsp; Fundamentos</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Pseint/Dos.rar" >2 &nbsp; |&nbsp; Introduccion</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Pseint/Tres.rar" >3 &nbsp; |&nbsp; Secuencial</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Pseint/Cuatro.rar" >4 &nbsp; |&nbsp; Secuencial</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Pseint/Cinco.rar" >5 &nbsp; |&nbsp; Secuencial</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Pseint/Seis.docx" >6 &nbsp; |&nbsp; Condicional</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Pseint/Siete.rar" >7 &nbsp; |&nbsp; Condicional</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Pseint/Ocho.rar" >8 &nbsp; |&nbsp; Condicional</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Pseint/Nueve.rar" >9 &nbsp; |&nbsp; Compuesta </a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Pseint/Diez.pdf" >10 |&nbsp; Contadores</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Pseint/Once.rar" >11 |&nbsp; Control Iterativo</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Pseint/Doce.rar" >12 |&nbsp; Control Iterativo</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Pseint/Trece.rar" >13 |&nbsp; Funciones</a></li>
+
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+              <i class="icon-columns menu-icon"></i>
+              <span class="menu-title">Html</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="form-elements">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Html5/Uno.pdf" >1 &nbsp; |&nbsp; Tegnologias</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Html5/Dos.pdf" >2 &nbsp; |&nbsp; Introduccion</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="https://youtu.be/UPtesWKX4gM" >3 &nbsp; |&nbsp; Elementos</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Html5/Cuatro.zip" >4 &nbsp; |&nbsp; Etiquetas</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Html5/Cinco.zip" >5 &nbsp; |&nbsp; Atributos</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Html5/Seis.rar" >6 &nbsp; |&nbsp; Enlaces</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Html5/Siete.zip" >7 &nbsp; |&nbsp; Listas</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Html5/Ocho.zip" >8 &nbsp; |&nbsp; Imagenes</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Html5/Nueve.rar" >9 &nbsp; |&nbsp; Tablas</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Html5/Diez.rar" >10 |&nbsp; Formularios</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Css</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="charts">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Css3/Uno.rar" >1 &nbsp; |&nbsp; Introduccion</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Css3/Dos.rar" >2 &nbsp; |&nbsp; Sintaxis</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Css3/Tres.rar" >3 &nbsp; |&nbsp; Selectores</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Css3/Cuatro.rar" >4 &nbsp; |&nbsp; Modelos</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="https://eliseovega.github.io/css_posicionamiento.html" >5 &nbsp; |&nbsp; Posiciones</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Css3/Seis.rar" >6 &nbsp; |&nbsp; Tipos de Posiciones</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Css3/Siete.rar" >7 &nbsp; |&nbsp; Tipos de Posiciones</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Css3/Ocho.rar" >8 &nbsp; |&nbsp; Posicionamiento Avanzado</a></li>
+       
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+              <i class="icon-grid-2 menu-icon"></i>
+              <span class="menu-title">Javascript</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="tables">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="JavaScript/Uno.rar" >1 &nbsp; |&nbsp; Secuencial</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="JavaScript/Dos.rar" >2 &nbsp; |&nbsp; Condicional</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="JavaScript/Tres.rar" >3 &nbsp; |&nbsp; Condicional</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="JavaScript/Cuatro.rar" >4 &nbsp; |&nbsp; Condicional</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="JavaScript/Cinco.zip" >5 &nbsp; |&nbsp; Control Iterativo</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="JavaScript/Seis.zip" >6 &nbsp; |&nbsp; Funciones</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="JavaScript/Siete.zip" >7 &nbsp; |&nbsp; Funciones Multiples</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="JavaScript/Ocho.rar" >8 &nbsp; |&nbsp; Validacion</a></li>
+         
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+              <i class="icon-contract menu-icon"></i>
+              <span class="menu-title">Python</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="icons">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Python/Uno.pdf" >1 &nbsp; |&nbsp; Fundamentos</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Python/Dos.rar" >2 &nbsp; |&nbsp; Secuencial</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Python/Tres.zip" >3 &nbsp; |&nbsp; Condicional</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Python/Cuatro.rar" >4 &nbsp; |&nbsp; Condicional</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Python/Cinco.rar" >5 &nbsp; |&nbsp; Control Iterativo</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Python/Seis.rar" >6 &nbsp; |&nbsp; Control Iterativo</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Python/Siete.rar" >7 &nbsp; |&nbsp; Control Iterativo</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Python/Ocho.pdf" >8 &nbsp; |&nbsp; Datos</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Python/Nueve.zip" >9 &nbsp; |&nbsp; Datos</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Python/Diez.zip" >10 |&nbsp; Datos</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Python/Once.zip" >11 |&nbsp; Datos</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Python/Doce.rar" >12 |&nbsp; Datos</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Python/Trece.rar" >13 |&nbsp; Examen</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Python/Catorce.rar" >14 |&nbsp; Datos</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Python/Quince.rar" >15 |&nbsp; Funciones</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Python/Dieciseis.rar" >16 |&nbsp; Funciones</a></li>
+              </ul>
+            </div>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#error" aria-expanded="false" aria-controls="error">
+              <i class="icon-ban menu-icon"></i>
+              <span class="menu-title">Bootstrap</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="error">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Boostrap/Uno.pdf" >1 &nbsp; |&nbsp; Fundamentos</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Boostrap/Dos.rar" >2 &nbsp; |&nbsp; Contenedores</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Boostrap/Tres.rar" >3 &nbsp; |&nbsp; Rejillas</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Boostrap/Cuatro.rar" >4 &nbsp; |&nbsp; Rejillas</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Boostrap/Cinco.rar" >5 &nbsp; |&nbsp; Puntos De Descanso</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Boostrap/Seis.zip" >6 &nbsp; |&nbsp; Componentes</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Boostrap/Siete.rar" >7 &nbsp; |&nbsp; Componentes</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Boostrap/Ocho.rar" >8 &nbsp; |&nbsp; Componentes</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Boostrap/Nueve.rar" >9 &nbsp; |&nbsp; Contenido</a></li>
+                <li class="nav-item"> <a class="nav-link" target="_blank" href="Boostrap/Diez.rar" >10 |&nbsp; Portafolio</a></li>
+              </ul>
+            </div>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <i class="icon-head menu-icon"></i>
+              <span class="menu-title">Usuario</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="index.html"> Ingresar </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Registrarte </a></li>
+              </ul>
+            </div>
+          </li>
+
+
+
+        </ul>
+      </nav>
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-12 grid-margin">
+              <div class="row">
+                <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                  <h3 class="font-weight-bold">Bienvenido, estamos en linea!</h3>
+                  <h6 class="font-weight-normal mb-0">Analisis y Desarrollo de Sistemas de Informacion <span class="text-primary">Sena Regional Sucre</span></h6>
+                </div>
+          <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card tale-bg">
+                <div class="card-people">
+                  <img src="images/Gus.gif" alt="people" id="Gus">
+                  <div class="weather-info">
+                    <div class="d-flex">
+                      <div>
+                        <h2 class="mb-0 font-weight-normal"><i class=" mr-2"></i><sup></sup></h2>
+                      </div>
+                      <div class="ml-2">
+                        <h4 class="location font-weight-normal"></h4>
+                        <h6 class="font-weight-normal"></h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 grid-margin transparent">
+              <div class="row">
+                <div class="col-md-6 mb-4  stretch-card transparent">
+                  <div class="card card-tale">
+                    <div class="card-body text-center">
+                      <img src="images/Html.png" height="120rem" id="Logos">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4  stretch-card transparent">
+                  <div class="card card-tale">
+                    <div class="card-body text-center">
+                          <img src="images/Css3.png" height="120rem" id="Logos">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-4 stretch-card transparent">
+                  <div class="card card-tale">
+                    <div class="card-body text-center">
+                        <img src="images/Java.png" height="120rem" id="Logos">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4  stretch-card transparent">
+                  <div class="card card-tale">
+                    <div class="card-body text-center">
+                      <img src="images/Python.png" height="120rem" id="Logos">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div> 
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-6 grid-margin stretch-card ">
+          <div class="card">
+            <div class="card-body text-center" id="Chiquito">
+
+             <a href="https://www.sena.edu.co/es-co/Paginas/default.aspx" target="_blank"> 
+              <img src="images/Sena.gif" height="100%" width="100%" id="Sena">
+            </a>
+
+              </div>
+            </div>
+          </div>
+        
+
+
+        <div class="col-md-6 grid-margin stretch-card ">
+          <div class="card">
+            <div class="card-body text-center" id="Chiquito">
+              <p class="card-title">¡Localizanos!</p>
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2016449.8300783653!2d-76.28249911123599!3d9.210393579653383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e5915b6f2835f85%3A0x7432bdfe297b75a2!2sSENA!5e0!3m2!1ses!2sco!4v1669298000947!5m2!1ses!2sco" width="100%%" height="90%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+        <!-- content-wrapper ends -->
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2022. <a href="Gus-Intentos.github.io" target="_blank">Gustavo Vitola</a> Aprendiz En el airea de Sistemas . ADSI</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">SENA - CITS <i class="ti-heart text-danger ml-1"></i></span>
+          </div>
+          <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Programa <a href="https://www.themewagon.com/" target="_blank">ADSI</a></span> 
+          </div>
+        </footer> 
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>   
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+
+  <!-- plugins:js -->
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="vendors/chart.js/Chart.min.js"></script>
+  <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="js/dataTables.select.min.js"></script>
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="js/dashboard.js"></script>
+  <script src="js/Chart.roundedBarCharts.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>
+
